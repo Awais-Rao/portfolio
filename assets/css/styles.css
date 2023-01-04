@@ -183,7 +183,7 @@ img {
 
 /*==================== loader ====================*/
 .loader__body{
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   z-index: 99999999;
