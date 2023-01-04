@@ -1,3 +1,9 @@
+/*==================== HIDE LOADER====================*/
+const loader = document.getElementById('preloader');
+window.addEventListener("load", ()=>{
+    loader.style.visibility= "hidden";
+})
+
 /*==================== MENU SHOW Y HIDDEN ====================*/
 const navMenue = document.getElementById('nav-menu'),
     navToggle = document.getElementById('nav-toggle'),
@@ -173,6 +179,7 @@ let swiperTestimonial = new Swiper('.testimonial_container', {
   });
 
 /*==================== SCROLL SECTIONS ACTIVE LINK ====================*/
+
 const sections = document.querySelectorAll('section[id]')
 
 function scrollActive(){
@@ -184,9 +191,9 @@ function scrollActive(){
         sectionId = current.getAttribute('id')
 
         if(scrollY > sectionTop && scrollY <= sectionTop + sectionHeight){
-            document.querySelector('.nav__menu a[href*=' + sectionId + ']').classList.add('active-link')
+            document.querySelector('.nav__menu a[href*=' + sectionId + ']').classList.add('active__link')
         }else{
-            document.querySelector('.nav__menu a[href*=' + sectionId + ']').classList.remove('active-link')
+            document.querySelector('.nav__menu a[href*=' + sectionId + ']').classList.remove('active__link')
         }
     })
 }
