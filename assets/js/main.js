@@ -2,6 +2,8 @@
 const loader = document.getElementById('preloader');
 window.addEventListener("load", ()=>{
     loader.style.visibility= "hidden";
+    // const screenWidth  = window.screen.width;
+    // alert(screenWidth);
 })
 
 /*==================== MENU SHOW Y HIDDEN ====================*/
@@ -244,3 +246,131 @@ themeButton.addEventListener('click', () => {
     localStorage.setItem('selected-theme', getCurrentTheme())
     localStorage.setItem('selected-icon', getCurrentIcon())
 })
+
+
+/*==================== SEND CONTACT FORM ====================*/
+const contactForm = document.getElementById('contact-form'),
+    contactName = document.getElementById('contact-name'),
+    contactEmail = document.getElementById('contact-email'),
+    contactProject = document.getElementById('contact-project'),
+    contactMessage = document.getElementById('contact-message'),
+    contactAlert = document.getElementById('contact-alert');
+
+
+const sendEmail = (e) =>{
+
+    e.preventDefault()
+
+    //check if the field has a value
+    if( contactName.value === '' || contactProject.value === '' || contactEmail.value === ''){
+        //Add color
+        contactAlert.classList.remove('color-green')
+        contactAlert.classList.add('color-red')
+
+
+        //Show message
+        contactAlert.innerHTML = 'Write all the input fields  <i class="uil uil-envelope-exclamation contact-alert-icon"></i>';
+        
+        //remove message after five seconds
+        setTimeout(()=>{
+            contactAlert.innerHTML= ''
+        }, 5000)
+        
+
+    }else{
+
+       // Check for internet connection
+       if(navigator.onLine){
+                 //service-ID , templet-TD , #form , publicKey
+                 emailjs.sendForm('service_qqx9kkb','template_zqpegsw','#contact-form','6gWau3TH7iSHrm1ez')
+                 .then(()=> {
+                     contactAlert.classList.remove('color-red')
+                     contactAlert.classList.add('color-green')
+                     contactAlert.innerHTML = 'Form sent successfuly  <i class="uis uis-check-circle contact-alert-icon"></i>';
+         
+                     // reset form Values
+                     contactForm.reset();
+                     
+                     //remove message after five seconds
+                     setTimeout(()=>{
+                         contactAlert.innerHTML= ''
+                     }, 7000)
+         
+                 },(error)=>{
+                     alert("OOPS! Something has failed......")
+                 })
+       }
+       // If device dont have connection
+       else{
+        //Add color
+        contactAlert.classList.remove('color-green')
+        contactAlert.classList.add('color-red')
+
+        //Show message
+        contactAlert.innerHTML = 'looks like you dont have internet connection...  <i class="uil uil-wifi-slash contact-alert-icon"></i>';
+        setTimeout(()=>{
+            contactAlert.innerHTML= ''
+        }, 5000)
+       }
+    }
+
+}
+
+contactForm.addEventListener('submit', sendEmail)
+
+
+/*==================== TO DISABLE RIGHT CLICK ====================*/
+
+document.addEventListener("contextmenu", function (e){
+    e.preventDefault();
+}, false);
+
+/*==================== TO DISABLE SCREENSHOTS ====================*/
+document.addEventListener('keyup', (e) => {
+    if (e.key == 'PrintScreen') {
+        navigator.clipboard.writeText('');
+        alert('Screenshots disabled!');
+    }
+});
+
+/*==================== TO DISABLE PRINTS WHIT CTRL+P ====================*/
+document.addEventListener('keydown', (e) => {
+    if (e.ctrlKey && e.key == 'p') {
+        alert('This section is not allowed to print or export to PDF');
+        e.cancelable = true;
+        e.preventDefault();
+        e.stopImmediatePropagation();
+    }
+});
+
+/*==================== TO DISABLE SHORTCUTS ====================*/
+document.onkeydown = function(e) {
+    if(event.keyCode == 123) {
+       return false;
+    }
+    if(e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0)) {
+        alert('This web page do not allow to open Developers tool....');
+        e.cancelable = true;
+        e.preventDefault();
+        e.stopImmediatePropagation();
+       
+       return false;
+    }
+    if(e.ctrlKey && e.shiftKey && e.keyCode == 'C'.charCodeAt(0)) {
+        alert('This web page do not allow Inspect tool....');
+        e.cancelable = true;
+        e.preventDefault();
+        e.stopImmediatePropagation();
+        return false;
+    }
+    if(e.ctrlKey && e.shiftKey && e.keyCode == 'J'.charCodeAt(0)) {
+        alert('Editable elements are protected on this webpage.');
+        e.cancelable = true;
+        e.preventDefault();
+        e.stopImmediatePropagation();
+        return false;
+    }
+    if(e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)) {
+       return false;
+    }
+  }

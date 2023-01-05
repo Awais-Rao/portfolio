@@ -22,6 +22,8 @@
     --container-color: #fff;
     --scroll-bar-color: hsl(var(--hue-color), 12%, 90%);
     --scroll-thumb-color: hsl(var(--hue-color), 12%, 80%);
+    --success: hsl(123, 86%, 40%);
+    --error: hsl(4, 100%, 50%);
 
     /*========== Font and typography ==========*/
     --body-font: 'Poppins', sans-serif;
@@ -80,6 +82,8 @@ body.dark-theme{
     --container-color: hsl(var(--hue-color), 29%, 16%);
     --scroll-bar-color: hsl(var(--hue-color), 12%, 48%);
     --scroll-thumb-color: hsl(var(--hue-color), 12%, 36%);
+    --success: hsl(123, 80%, 61%);
+    --error: hsl(4, 71%, 50%);
 }
 
 /*========== Button Dark/Light ==========*/
@@ -179,6 +183,13 @@ img {
   left: 0;
   z-index: var(--z-fixed);
   background-color: var(--body-color);
+}
+
+
+/*==================== STOP COPYCATS ====================*/
+
+html {
+  user-select: none;
 }
 
 /*==================== loader ====================*/
@@ -455,6 +466,10 @@ img {
 .button--white:hover{
   background-color: #fff;
 }
+.contact__button{
+  outline: none;
+  border: none;
+}
 
 /*==================== ABOUT ====================*/
 .about__img{
@@ -523,6 +538,7 @@ img {
 .skills__list{
   row-gap: 1.5rem;
   padding-left: 2.7rem;
+  padding-right: 2.7rem;
 }
 
 .skills__title{
@@ -732,7 +748,7 @@ img {
 }
 .services__modal-icon{
   color: var(--first-color);
-  margin-right: var(--mb-0-5);
+  margin-right: var(--mb-1-5);
 }
 
 /* Active Modal */
@@ -899,7 +915,7 @@ img {
   background-color: var(--input-color);
   font-family: var(--body-font);
   color: var(--text-color);
-  font-size: var(--normal-font-size);
+  font-size: var(--small-font-size);
   border: none;
   outline: none;
   padding: .25rem .5rem .5rem 0;
@@ -907,6 +923,24 @@ img {
 .contact__label{
   font-size: var(--smaller-font-size);
   color: var(--title-color);
+}
+.contact__alert{
+  font-size: var(--small-font-size);
+  margin-left: var(--mb-1);
+}
+.contact-alert-icon{
+  font-size: var(--normal-font-size);
+}
+
+/* Satus Color */
+.color-red{
+  color: var(--error);
+}
+.color-green{
+  color: var(--success);
+}
+.color-blue{
+  color: var(--text-color-light);
 }
 
 /*==================== FOOTER ====================*/
@@ -997,7 +1031,7 @@ img {
 
 /*==================== MEDIA QUERIES ====================*/
 /* For small devices */
-@media screen and (max-width:320px){
+@media screen and (max-width:280px){
   .container{
     margin-left: var(--mb-1);
     margin-right: var(--mb-1);
@@ -1273,11 +1307,11 @@ img {
   .qualification__data-text{
     transform: translateX(1rem);
   }
+  .portfolio__data{
+   padding-right: 1.5rem;
+  }
   .portfolio__content{
     column-gap: 5rem;
-  }
-  .portfolio__data{
-    transform: translateX(-3rem);
   }
   .portfolio__img{
     transform: translateX(3rem);
@@ -1314,6 +1348,10 @@ img {
 @media screen and (min-width:1300px) {
   .qualification__data-text{
     transform: translateX(4rem);
+  }
+  .portfolio__data{
+    transform: translateX(-3rem);
+    padding-right: 3.5rem;
   }
   .nav{
     padding-left: 2rem;
