@@ -360,37 +360,37 @@ document.onkeydown = function(e) {
 
 /*==================== SCROLL REVEAL ====================*/
 
-const sr = ScrollReveal({
-    origin: 'top',
-    distance: '60px',
-    duration: 2000,
-    delay: 400
-})
+// const sr = ScrollReveal({
+//     origin: 'top',
+//     distance: '60px',
+//     duration: 2000,
+//     delay: 400
+// })
 
-sr.reveal(`.home__img`)
-sr.reveal(`.home__data` , {origin:'bottom'})
+// sr.reveal(`.home__img`)
+// sr.reveal(`.home__data` , {origin:'bottom'})
 
-sr.reveal(`.about__img` , {origin: 'right'})
-sr.reveal(`.about__data, .qualification__button` , {origin: 'left'})
-sr.reveal(`.home__social` , {origin:'left'} )
-sr.reveal(`.home__scroll` , {origin:'right'} )
+// sr.reveal(`.about__img` , {origin: 'right'})
+// sr.reveal(`.about__data, .qualification__button` , {origin: 'left'})
+// sr.reveal(`.home__social` , {origin:'left'} )
+// sr.reveal(`.home__scroll` , {origin:'right'} )
 
-sr.reveal(`.section__title, .section__subtitle` )
+// sr.reveal(`.section__title, .section__subtitle` )
 
-sr.reveal(`.skills__content` , {interval:600 , origin:'right'})
+// sr.reveal(`.skills__content` , {interval:600 , origin:'right'})
 
-sr.reveal(`.qualification__active`)
+// sr.reveal(`.qualification__active`)
 
-sr.reveal(`.portfolio__container`, {origin:'bottom'})
+// sr.reveal(`.portfolio__container`, {origin:'bottom'})
 
-sr.reveal(`.project`)
-sr.reveal(`.project__data`, {origin:'right'})
-sr.reveal(`.project__img`, {origin:'left'})
+// sr.reveal(`.project`)
+// sr.reveal(`.project__data`, {origin:'right'})
+// sr.reveal(`.project__img`, {origin:'left'})
 
-sr.reveal(`.testimonial_container`, {origin:'bottom'})
+// sr.reveal(`.testimonial_container`, {origin:'bottom'})
 
-sr.reveal(`.contact__information`, {origin:'left', interval:700})
-sr.reveal(`.contact__form`, {origin:'right'})
+// sr.reveal(`.contact__information`, {origin:'left', interval:700})
+// sr.reveal(`.contact__form`, {origin:'right'})
 
-sr.reveal(`.footer__container`)
-sr.reveal(`.footer__copy`, {origin:'bottom'})
+// sr.reveal(`.footer__container`)
+// sr.reveal(`.footer__copy`, {origin:'bottom'})
