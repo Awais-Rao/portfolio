@@ -116,24 +116,6 @@ const modalViews = document.querySelectorAll('.services__modal'),
         })
     } )
     
-    // let shutdown = function(modalClick){
-    //     modalViews[modalClick].classList.add('non-active-modal')
-    // }
-
-    // modalCloses.forEach((modalClose, i) => {
-    //     modalClose.addEventListener('click', () =>{
-    //        shutdown(i)
-    // })   
-    // });
-
-    // modalCloses.forEach((modalClose) => {
-    //     modalClose.addEventListener('click', () =>{
-    //         modalViews.forEach((modalView) =>{
-    //             modalView.classList.remove('active-modal');
-    //         })
-    //     })
-    // })
-    
 
 /*==================== PORTFOLIO SWIPER  ====================*/
 let swiperPortfolio = new Swiper('.portfolio__container', {
@@ -374,3 +356,40 @@ document.onkeydown = function(e) {
        return false;
     }
   }
+
+
+/*==================== SCROLL REVEAL ====================*/
+
+const sr = ScrollReveal({
+    origin: 'top',
+    distance: '60px',
+    duration: 2000,
+    delay: 400
+})
+
+sr.reveal(`.home__img`)
+sr.reveal(`.home__data` , {origin:'bottom'})
+
+sr.reveal(`.about__img` , {origin: 'right'})
+sr.reveal(`.about__data, .qualification__button` , {origin: 'left'})
+sr.reveal(`.home__social` , {origin:'left'} )
+sr.reveal(`.home__scroll` , {origin:'right'} )
+
+sr.reveal(`.section__title, .section__subtitle` )
+
+sr.reveal(`.skills__content` , {interval:600 , origin:'right'})
+
+sr.reveal(`.qualification__active`)
+
+sr.reveal(`.portfolio__container`, {origin:'bottom'})
+
+sr.reveal(`.project`, {origin:'bottom'})
+sr.reveal(`.project__data, .project__img`, {origin:'right'})
+
+sr.reveal(`.testimonial_container`, {origin:'bottom'})
+
+sr.reveal(`.contact__information`, {origin:'left', interval:700})
+sr.reveal(`.contact__form`, {origin:'right'})
+
+sr.reveal(`.footer__container`)
+sr.reveal(`.footer__copy`, {origin:'bottom'})

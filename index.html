@@ -16,11 +16,18 @@
     <!-- ================ SWIPER CSS ================= -->
     <!-- <link rel="stylesheet" href="assets/css/swiper-bundle.min.css"> -->
     <link  rel="stylesheet"  href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
+
     <!-- ================ CSS ================= -->
     <link rel="stylesheet" href="assets/css/styles.css">
 
     <!-- ================ FAVICON ================= -->
     <link rel="icon" type="image/x-icon" href="assets/img/logo.png">
+    
+    <!-- ================ DISABLE DISPLAY FOR PRINT ================= -->
+    <style type="text/css" media="print">
+        BODY {display:none;visibility:hidden;}
+    </style>
+
 
     <title>Awais Rao</title>
 </head>
@@ -588,7 +595,7 @@
             <div class="services__container container grid">
 
                 <!--==================== SERVICES 1====================-->
-                <div class="services__content">
+                <div class="services__content services__wrapper ">
                     <div>
                         <i class="uil uil-web-grid services__icon"></i>
                         <h3 class="services__title">Ui/Ux <br> Designer</h3>
@@ -627,7 +634,7 @@
                 </div>
 
                 <!--==================== SERVICES 2====================-->
-                <div class="services__content">
+                <div class="services__content services__wrapper">
                     <div>
                         <i class="uil uil-arrow services__icon"></i>
                         <h3 class="services__title">Frontend <br> Developer</h3>
@@ -666,7 +673,7 @@
                 </div>
 
                 <!--==================== SERVICES 3====================-->
-                <div class="services__content">
+                <div class="services__content services__wrapper">
                     <div>
                         <i class="uil uil-pen services__icon"></i>
                         <h3 class="services__title">Branding <br> Designer</h3>
@@ -1015,11 +1022,17 @@
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
     
     <!-- =================== SWIPPER JS ================= -->
-    <!-- <script src="assets/js/swiper-bundle.min.js"></script> -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    
+    <!-- =================== SCROLL REVEAL JS ================= -->
+    <script src="assets/js/scrollreveal.min.js"></script>
 
     <!-- =================== MAIN JS ================= -->
     <script src="assets/js/main.js"></script>
+
+
+
+    
 
 </body>
 
