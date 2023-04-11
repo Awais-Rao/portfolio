@@ -383,8 +383,9 @@ sr.reveal(`.qualification__active`)
 
 sr.reveal(`.portfolio__container`, {origin:'bottom'})
 
-sr.reveal(`.project`, {origin:'bottom'})
-sr.reveal(`.project__data, .project__img`, {origin:'right'})
+sr.reveal(`.project`)
+sr.reveal(`.project__data`, {origin:'right'})
+sr.reveal(`.project__img`, {origin:'left'})
 
 sr.reveal(`.testimonial_container`, {origin:'bottom'})
 
