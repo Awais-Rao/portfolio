@@ -386,7 +386,7 @@ html {
 }
 .home__blob-img{
   width: 220px;
-  filter: grayscale(1);
+  /* filter: grayscale(1); */
 }
 .home__data{
   grid-column: 1/3;
