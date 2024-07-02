@@ -477,7 +477,8 @@ html {
   border-radius: .8rem;
   justify-self: center;
   align-self: center;
-  filter: grayscale(1);
+  filter: grayscale(1.2);
+  /* filter: saturate(0.9); */
 }
 .about__description{
   text-align: center;
