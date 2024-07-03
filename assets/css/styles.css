@@ -966,6 +966,7 @@ html {
   display: flex;
   flex-direction: column;
   row-gap: 1.5rem;
+  justify-content: center;
 }
 .footer__link:hover{
   color: var(--first-color-lighter);

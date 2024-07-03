@@ -301,6 +301,10 @@ const sendEmail = (e) =>{
 contactForm.addEventListener('submit', sendEmail)
 
 
+
+
+
+
 /*==================== TO DISABLE RIGHT CLICK ====================*/
 
 document.addEventListener("contextmenu", function (e){
@@ -326,36 +330,36 @@ document.addEventListener('keydown', (e) => {
 });
 
 /*==================== TO DISABLE SHORTCUTS ====================*/
-document.onkeydown = function(e) {
-    if(event.keyCode == 123) {
-       return false;
-    }
-    if(e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0)) {
-        alert('This web page do not allow to open Developers tool....');
-        e.cancelable = true;
-        e.preventDefault();
-        e.stopImmediatePropagation();
+// document.onkeydown = function(e) {
+//     if(event.keyCode == 123) {
+//        return false;
+//     }
+//     if(e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0)) {
+//         alert('This web page do not allow to open Developers tool....');
+//         e.cancelable = true;
+//         e.preventDefault();
+//         e.stopImmediatePropagation();
        
-       return false;
-    }
-    if(e.ctrlKey && e.shiftKey && e.keyCode == 'C'.charCodeAt(0)) {
-        alert('This web page do not allow Inspect tool....');
-        e.cancelable = true;
-        e.preventDefault();
-        e.stopImmediatePropagation();
-        return false;
-    }
-    if(e.ctrlKey && e.shiftKey && e.keyCode == 'J'.charCodeAt(0)) {
-        alert('Editable elements are protected on this webpage.');
-        e.cancelable = true;
-        e.preventDefault();
-        e.stopImmediatePropagation();
-        return false;
-    }
-    if(e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)) {
-       return false;
-    }
-  }
+//        return false;
+//     }
+//     if(e.ctrlKey && e.shiftKey && e.keyCode == 'C'.charCodeAt(0)) {
+//         alert('This web page do not allow Inspect tool....');
+//         e.cancelable = true;
+//         e.preventDefault();
+//         e.stopImmediatePropagation();
+//         return false;
+//     }
+//     if(e.ctrlKey && e.shiftKey && e.keyCode == 'J'.charCodeAt(0)) {
+//         alert('Editable elements are protected on this webpage.');
+//         e.cancelable = true;
+//         e.preventDefault();
+//         e.stopImmediatePropagation();
+//         return false;
+//     }
+//     if(e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)) {
+//        return false;
+//     }
+//   }
 
 
 /*==================== SCROLL REVEAL ====================*/
